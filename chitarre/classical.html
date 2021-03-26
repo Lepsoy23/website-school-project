@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="../immagini/nota-musicale-icon.png"/>
+    <link rel="stylesheet" href="../style.css">
+    <title>Classica</title>
+  </head>
+  <body>
+
+    <!-- titolo -->
+
+    <div id="titolo">
+      <b>Classica</b>
+    </div>
+
+    <!-- navbar -->
+
+    <div id="navbar" style="position: sticky;">
+
+        <div class="navbar-content"><a href="../chisiamo.html">Chi siamo</a></div>
+        <div class="navbar-content"><a href="../info.html">Info</a></div>
+
+        <div class="navbar-content dropdown">
+
+            <a href="" class="dropbtn">Chitarre</a>
+
+            <div class="dropdown-content">
+            <a href="acoustic.html">Acustiche</a>
+            <a href="classical.html">Classiche</a>
+            <a href="stratocaster.html">Stratocaster</a>
+            <a href="telecaster.html">Telecaster</a>
+            </div>
+
+        </div>
+
+        <div class="navbar-content"><a href="../home.html">Home</a></div>
+
+        <div class="navbar-content" id="s" style="background-color: #52BE80;"><a href="" id="a">Sticky</a></div>
+
+    </div>
+
+    <!-- sottotitoli -->
+
+    <b class="sottotitolo">Ha una storia molto imponente alle spalle</b>
+
+    <!-- contenuti -->
+
+    <div class="contenuti">
+      <p class="par">La chitarra classica è un tipo di chitarra utilizzato per l'esecuzione di brani di musica classica o popolare (come per esempio la musica latino-americana o il flamenco). 
+        La forma della chitarra classica, che conosciamo e usiamo oggi, risale alla seconda metà dell'Ottocento.
+      </p>
+
+      <p class="par">Il periodo che copre la seconda metà del XIX secolo vide un lento ma progressivo declino della cultura chitarristica; si affievolì quell'inedito interesse per lo strumento, 
+        che interpreti come Giuliani erano riusciti a imporre sulle scene musicali delle importanti capitali europee. La prosecuzione della tradizione strumentale sopravvisse comunque in ambiti più ristretti, ad opera di pochi ma importantissimi maestri.
+        La figura dominante, per fama, all'interno di questo panorama fu certamente quella dello spagnolo Francisco Tárrega. La sua opera fu di importanza capitale: al di là dei discussi meriti nello sviluppo della tecnica, egli con la sua "scuola" mantenne viva una delle tradizioni chitarristiche più importanti in Europa 
+        - quella spagnola - e molti dei suoi allievi, come Emilio Pujol, Miguel Llobet e Daniel Fortea, saranno dopo di lui figure centrali del panorama chitarristico mondiale. 
+        Oltre a ciò, fu un brillantissimo concertista. Tarrega compose moltissimi brani, alcuni dei quali costituiscono oggi cardini imprescindibili nel repertorio della chitarra. 
+        Fra tutti spicca per fama Recuerdos de la Alhambra, scritto per la tecnica del tremolo e che rispecchia il forte legame del compositore con la tradizione musicale spagnola. 
+        Di tutt'altro genere sono invece le sue famose Variazioni su Il Carnevale di Venezia, che con un virtuosismo esuberante e a tratti frivolo rievocano con divertimento i passati fasti della chitarra del classicismo. 
+        Il suo contributo all'arricchimento del repertorio per chitarra si estese anche in una direzione destinata ad avere grandissima fortuna: quella delle trascrizioni per chitarra.
+        Sempre in Spagna, altre figure di rilievo – come chitarristi e compositori – del periodo furono quelle di Julián Arcas, il quale fu quasi un mentore per Tárrega, e di José Ferrer. 
+        Nel resto d'Europa, è importante menzionare l'opera di Jacques Tessarech (1862-1929) in Francia, Luigi Mozzani (1869-1943) in Italia e Heinrich Albert (1870-1950) in Germania: nomi meno noti, ma anch'essi decisivi nella maturazione delle condizioni per quella che sarà la grande rinascita della chitarra nel XX secolo. 
+        Fra le composizioni di Mozzani predominano quelle di interesse didattico (spicca la raccolta Studi per la chitarra pubblicata a New York a partire dal 1896), ma vi si trovano anche rilevanti pezzi concertistici.
+      </p>
+
+      <p class="par">Il modello di chitarra che vendiamo è quello ispirato alle chitarre di Tarrega: piccolo, versatile e potente.
+      </p>
+
+      <p class="par">Quisque nec venenatis mauris. Integer tempor congue malesuada. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+        In lacinia diam sit amet convallis lobortis. Fusce ac leo est. Praesent ullamcorper augue nunc, mattis congue tellus volutpat quis.
+        Morbi in elit eget elit interdum vestibulum in in magna. Etiam ut commodo mi, eget consequat dui. Vestibulum ornare at mauris vel luctus.
+        Donec non facilisis arcu.
+      </p>
+
+      <p class="par">Donec consectetur semper erat non porta. Ut faucibus est velit, sit amet suscipit mauris tempus eget.
+        Donec odio nulla, egestas ac elit at, convallis facilisis nisi. Aliquam leo diam, accumsan id dignissim eget, interdum a felis.
+        Vivamus quis egestas elit. Phasellus convallis ipsum congue nulla pretium posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi sodales massa vel bibendum efficitur.
+        Nullam enim ipsum, sodales eu mi eget, iaculis laoreet nisl. Aliquam neque erat, fringilla non consequat vel, congue eu urna.
+        Fusce non purus quis ligula congue molestie. Integer vel dignissim felis.
+      </p>
+
+      <div class="card">
+          <img src="../immagini/chitarra-classica.png" alt="" class="img" />
+      </div>
+      <p class="descr">Chitarra classica, a partire da 100,00 €</p>
+    </div>
+
+    <!-- footer -->
+
+    <div id="footer">
+      <span class="info">enrico@guitarhub.it</span> |<span class="info"> +39 111 111 1111</span>
+    </div>
+
+    <script type="text/javascript">
+      var n = document.getElementById("navbar");
+      var st = document.getElementById("s");
+      var a = document.getElementById("a");
+
+        document.getElementById("s").onclick = function St_NoSt(e){
+          e.preventDefault();
+
+          if(n.style.position === "sticky"){
+            n.style.position = "static";
+            st.style.backgroundColor = "#333";
+            a.innerHTML = "Static";
+          }else if(n.style.position === "static"){
+            n.style.position = "sticky";
+            st.style.backgroundColor = "#52BE80";
+            a.innerHTML = "Sticky";
+          }
+        }
+    </script>
+
+  </body>
+</html>

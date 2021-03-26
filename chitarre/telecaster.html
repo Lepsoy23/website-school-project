@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="../immagini/nota-musicale-icon.png"/>
+    <link rel="stylesheet" href="../style.css">
+    <title>Telecaster</title>
+  </head>
+  <body>
+
+    <!-- titolo -->
+
+    <div id="titolo">
+      <b>Telecaster</b>
+    </div>
+
+    <!-- navbar -->
+
+    <div id="navbar" style="position: sticky;">
+
+        <div class="navbar-content"><a href="../chisiamo.html">Chi siamo</a></div>
+        <div class="navbar-content"><a href="../info.html">Info</a></div>
+  
+        <div class="navbar-content dropdown">
+  
+          <a href="" class="dropbtn">Chitarre</a>
+  
+          <div class="dropdown-content">
+            <a href="acoustic.html">Acustiche</a>
+            <a href="classical.html">Classiche</a>
+            <a href="stratocaster.html">Stratocaster</a>
+            <a href="telecaster.html">Telecaster</a>
+          </div>
+  
+        </div>
+  
+        <div class="navbar-content"><a href="../home.html">Home</a></div>
+  
+        <div class="navbar-content" id="s" style="background-color: #52BE80;"><a href="" id="a">Sticky</a></div>
+  
+    </div>
+  
+    <!-- sottotitolo -->
+
+    <b class="sottotitolo">Primo modello di chitarra elettrica</b>
+
+    <!-- contenuti -->
+
+    <div class="contenuti">
+      <p class="par">La Fender Telecaster, inizialmente Fender Broadcaster, è un modello di chitarra elettrica solid body prodotto da Fender dal 1951.
+      </p>
+
+      <p class="par">Nel 1950 Leo Fender introdusse nel mercato una chitarra elettrica denominata "Esquire", subito ribattezzata "Broadcaster", attingendo alcune delle innovazioni tecniche introdotte dalla chitarra di Bigsby, 
+        ma Gretsch, l'allora più grande brand di strumenti musicali, accampò diritti precedenti sul nome. 
+        Leo Fender, con la sua piccola squadra di liutai di Fullerton (California), decise allora di cambiare il nome allo strumento. 
+        Nell'attesa di trovare un nome adeguato per la sua chitarra, per un breve periodo si limitò a eliminare la scritta "Broadcaster" dalle etichette che venivano poste sulla paletta. 
+        I pochi esemplari prodotti in quel breve periodo sono oggi noti come Nocaster.
+        Successivamente la chitarra fu chiamata "Telecaster", in onore all'invenzione che in quel periodo avrebbe cambiato la storia dell'uomo: la televisione. 
+        Nasce così la prima chitarra elettrica solid-body destinata ad una produzione in serie.
+      </p>
+
+      <p class="par">Il modello venduto per questo tipo di chitarra e quello della Fender.
+      </p>
+
+      <p class="par">Quisque nec venenatis mauris. Integer tempor congue malesuada. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+        In lacinia diam sit amet convallis lobortis. Fusce ac leo est. Praesent ullamcorper augue nunc, mattis congue tellus volutpat quis.
+        Morbi in elit eget elit interdum vestibulum in in magna. Etiam ut commodo mi, eget consequat dui. Vestibulum ornare at mauris vel luctus.
+        Donec non facilisis arcu.
+      </p>
+
+      <p class="par">Donec consectetur semper erat non porta. Ut faucibus est velit, sit amet suscipit mauris tempus eget.
+        Donec odio nulla, egestas ac elit at, convallis facilisis nisi. Aliquam leo diam, accumsan id dignissim eget, interdum a felis.
+        Vivamus quis egestas elit. Phasellus convallis ipsum congue nulla pretium posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi sodales massa vel bibendum efficitur.
+        Nullam enim ipsum, sodales eu mi eget, iaculis laoreet nisl. Aliquam neque erat, fringilla non consequat vel, congue eu urna.
+        Fusce non purus quis ligula congue molestie. Integer vel dignissim felis.
+      </p>
+
+      <div class="card">
+          <img src="../immagini/telecaster.png" alt="" class="img" />
+      </div>
+      <p class="descr">Telecaster, a partire da 999,00 €</p>
+    </div>
+
+    <!-- footer -->
+
+    <div id="footer">
+      <span class="info">enrico@guitarhub.it</span> |<span class="info"> +39 111 111 1111</span>
+    </div>
+
+    <script type="text/javascript">
+      var n = document.getElementById("navbar");
+      var st = document.getElementById("s");
+      var a = document.getElementById("a");
+
+        document.getElementById("s").onclick = function St_NoSt(e){
+          e.preventDefault();
+
+          if(n.style.position === "sticky"){
+            n.style.position = "static";
+            st.style.backgroundColor = "#333";
+            a.innerHTML = "Static";
+          }else if(n.style.position === "static"){
+            n.style.position = "sticky";
+            st.style.backgroundColor = "#52BE80";
+            a.innerHTML = "Sticky";
+          }
+        }
+    </script>
+
+  </body>
+</html>

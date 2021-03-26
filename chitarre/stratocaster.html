@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="../immagini/nota-musicale-icon.png"/>
+    <link rel="stylesheet" href="../style.css">
+    <title>Stratocaster</title>
+  </head>
+  <body>
+
+    <!-- titolo -->
+
+    <div id="titolo">
+      <b>Stratocaster</b>
+    </div>
+
+    <!-- navbar -->
+
+    <div id="navbar" style="position: sticky;">
+
+      <div class="navbar-content"><a href="../chisiamo.html">Chi siamo</a></div>
+      <div class="navbar-content"><a href="../info.html">Info</a></div>
+
+      <div class="navbar-content dropdown">
+
+        <a href="" class="dropbtn">Chitarre</a>
+
+        <div class="dropdown-content">
+          <a href="acoustic.html">Acustiche</a>
+          <a href="classical.html">Classiche</a>
+          <a href="stratocaster.html">Stratocaster</a>
+          <a href="telecaster.html">Telecaster</a>
+        </div>
+
+      </div>
+
+      <div class="navbar-content"><a href="../home.html">Home</a></div>
+
+      <div class="navbar-content" id="s" style="background-color: #52BE80;"><a href="" id="a">Sticky</a></div>
+
+    </div>
+
+    <!-- sottotitolo -->
+
+    <b class="sottotitolo">Modello standard di chitarra elettrica</b>
+
+    <!-- contenuti vari -->
+    
+    <div class="contenuti">
+      <p class="par">La Fender Stratocaster è una chitarra elettrica solid-body (priva di cassa armonica) ideata da Leo Fender negli anni cinquanta e tuttora prodotta dalla Fender Musical Instruments Corporation. 
+        Assieme alla Gibson Les Paul è considerata la chitarra elettrica per antonomasia, per la sua popolarità e la sua diffusione, come per l'influenza esercitata sul panorama musicale e sull'immaginario collettivo.
+      </p>
+
+      <p class="par">Nelle intenzioni di Fender, alla base della creazione di una nuova linea di chitarre che affiancasse il successo del modello Telecaster, 
+        c'era l'aspirazione a realizzare una chitarra che introducesse innovazioni sia di carattere tecnico (fra le quali un maggior numero di pick-up e l'introduzione della leva del vibrato), 
+        sia di carattere progettuale (l'abbandono della tradizionale forma della chitarra verso soluzioni più ergonomiche).
+        Il risultato è un progetto rivoluzionario: grazie alla forma innovativa, alla leggerezza dello strumento e alla maggiore facilità ad accedere alle note più acute della tastiera dovuta alla particolare forma scavata della spalla, 
+        la Stratocaster è considerata la più evoluta fra le chitarre elettriche dell'epoca.
+      </p>
+
+      <p class="par">L'unico modello di Stratocaste che vendiamo è della Fender, per ovvie ragioni.
+      </p>
+
+      <p class="par">Quisque nec venenatis mauris. Integer tempor congue malesuada. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+        In lacinia diam sit amet convallis lobortis. Fusce ac leo est. Praesent ullamcorper augue nunc, mattis congue tellus volutpat quis.
+        Morbi in elit eget elit interdum vestibulum in in magna. Etiam ut commodo mi, eget consequat dui. Vestibulum ornare at mauris vel luctus.
+        Donec non facilisis arcu.
+      </p>
+
+      <p class="par">Donec consectetur semper erat non porta. Ut faucibus est velit, sit amet suscipit mauris tempus eget.
+        Donec odio nulla, egestas ac elit at, convallis facilisis nisi. Aliquam leo diam, accumsan id dignissim eget, interdum a felis.
+        Vivamus quis egestas elit. Phasellus convallis ipsum congue nulla pretium posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi sodales massa vel bibendum efficitur.
+        Nullam enim ipsum, sodales eu mi eget, iaculis laoreet nisl. Aliquam neque erat, fringilla non consequat vel, congue eu urna.
+        Fusce non purus quis ligula congue molestie. Integer vel dignissim felis.
+      </p>
+
+      <div class="card">
+          <img src="../immagini/stratocaster.png" alt="" class="img" />
+      </div>
+      <p class="descr">Fender Stratocaster, a partire da 999,00 €</p>
+
+    </div>
+
+    <!-- footer -->
+
+    <div id="footer">
+      <span class="info">enrico@guitarhub.it</span> |<span class="info"> +39 111 111 1111</span>
+    </div>
+
+    <script type="text/javascript">
+      var n = document.getElementById("navbar");
+      var st = document.getElementById("s");
+      var a = document.getElementById("a");
+
+        document.getElementById("s").onclick = function St_NoSt(e){
+          e.preventDefault();
+
+          if(n.style.position === "sticky"){
+            n.style.position = "static";
+            st.style.backgroundColor = "#333";
+            a.innerHTML = "Static";
+          }else if(n.style.position === "static"){
+            n.style.position = "sticky";
+            st.style.backgroundColor = "#52BE80";
+            a.innerHTML = "Sticky";
+          }
+        }
+    </script>
+
+  </body>
+</html>
