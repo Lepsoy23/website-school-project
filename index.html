@@ -2,54 +2,57 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="immagini/home-icon.png"/>
     <title>Negozio di chitarre</title>
   </head>
-  
+
   <body>
 
     <!-- titolo -->
-    
+
     <div id="titolo">
       <b>GuitarHub</b>
     </div>
 
     <!-- navbar -->
-    
+
     <div id="navbar" style="position: sticky;">
 
       <div class="navbar-content"><a href="chisiamo.html">Chi siamo</a></div>
       <div class="navbar-content"><a href="info.html">Info</a></div>
-      
+
       <div class="navbar-content dropdown">
-        
-        <a href="" class="dropbtn">Chitarre</a>
-        
+
+        <a class="dropbtn">Chitarre</a>
+
         <div class="dropdown-content">
           <a href="chitarre/acoustic.html">Acustiche</a>
           <a href="chitarre/classical.html">Classiche</a>
           <a href="chitarre/stratocaster.html">Stratocaster</a>
           <a href="chitarre/telecaster.html">Telecaster</a>
         </div>
-        
+
       </div>
-      
+
+      <div class="navbar-content" id="carr"><a href="">Nel carrello &nbsp;<span id="contcarr">0</span></a></div>
       <div class="navbar-content" id="s" style="background-color: #52BE80;"><a href="" id="a">Sticky</a></div>
-      
+      <!--div class="navbar-content" id="svuotacarr" style="display: none;"><a href="">Svuota carrello</a></div-->
+
     </div>
 
     <!-- sottotitolo -->
-    
+
     <b class="sottotitolo">Pagina iniziale</b>
 
     <!-- contenuti -->
-    
+
     <div class="contenuti">
-      <p class="par">Se sei in cerca di una chitarra da comprare e non sai quale scegliere, GuitarHub fa per te! 
+      <p class="par">Se sei in cerca di una chitarra da comprare e non sai quale scegliere, GuitarHub fa per te!
         Oltre ad avere una vasta gamma tra cui scegliere, ci sono anche informazioni sul tipo di chitarra che vuoi aquistare, utile per capire se è nel tuo stile.
       </p>
-      
+
       <p class="par">La nostra azienda ha dei partnership con  produttori di fama mondiale, come Fender, Gibson e Taylor Guitars, per nominarne alcuni.
       </p>
 
@@ -60,13 +63,13 @@
         Quisque sit amet velit in nisl auctor pharetra. Aliquam nec ultrices lacus. Pellentesque lectus neque, venenatis ut augue a, tempor elementum leo.
         Aliquam aliquam congue eros, ac semper ligula euismod eget.
       </p>
-      
+
       <p class="par">Quisque nec venenatis mauris. Integer tempor congue malesuada. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
         In lacinia diam sit amet convallis lobortis. Fusce ac leo est. Praesent ullamcorper augue nunc, mattis congue tellus volutpat quis.
         Morbi in elit eget elit interdum vestibulum in in magna. Etiam ut commodo mi, eget consequat dui. Vestibulum ornare at mauris vel luctus.
         Donec non facilisis arcu.
       </p>
-      
+
       <p class="par">Donec consectetur semper erat non porta. Ut faucibus est velit, sit amet suscipit mauris tempus eget.
         Donec odio nulla, egestas ac elit at, convallis facilisis nisi. Aliquam leo diam, accumsan id dignissim eget, interdum a felis.
         Vivamus quis egestas elit. Phasellus convallis ipsum congue nulla pretium posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -74,47 +77,47 @@
         Nullam enim ipsum, sodales eu mi eget, iaculis laoreet nisl. Aliquam neque erat, fringilla non consequat vel, congue eu urna.
         Fusce non purus quis ligula congue molestie. Integer vel dignissim felis.
       </p>
-      
-      <div class="card">
-        <a href="chitarre/acoustic.html">
-          <img src="immagini/chitarra-acustica.png" title="Cliccami per sapere di più sulla chitarra!" alt="chitarra acustica" class="img" />
-        </a>
-      </div>
-      
-      <p class="descr">Acustica</p>
-      
-      <div class="card">
-        <a href="chitarre/classical.html">
-          <img src="immagini/chitarra-classica.png" title="Cliccami per sapere di più sulla chitarra!" alt="chitarra classica" class="img" />
-        </a>
-      </div>
-      
-      <p class="descr">Classica</p>
-      
-      <div class="card">
-        <a href="chitarre/stratocaster.html">
-          <img src="immagini/stratocaster.png" title="Cliccami per sapere di più sulla chitarra!" alt="stratocaster" class="img" />
-        </a>
-      </div>
-      
-      <p class="descr">Stratocaster</p>
-      
-      <div class="card">
-        <a href="chitarre/telecaster.html">
-          <img src="immagini/telecaster.png" title="Cliccami per sapere di più sulla chitarra!" alt="telecaster" class="img" />
-        </a>
-      </div>
-      
-      <p class="descr">Telecaster</p>
+
+        <div class="card">
+          <a href="chitarre/acoustic.html">
+            <img src="immagini/chitarra-acustica.png" title="Cliccami per sapere di più sulla chitarra!" alt="chitarra acustica" class="img" />
+          </a>
+          <p class="descr">Acustica</p>
+        </div>
+
+
+        <div class="card">
+          <a href="chitarre/classical.html">
+            <img src="immagini/chitarra-classica.png" title="Cliccami per sapere di più sulla chitarra!" alt="chitarra classica" class="img" />
+          </a>
+          <p class="descr">Classica</p>
+        </div>
+
+
+        <div class="card">
+          <a href="chitarre/stratocaster.html">
+            <img src="immagini/stratocaster.png" title="Cliccami per sapere di più sulla chitarra!" alt="stratocaster" class="img" />
+          </a>
+          <p class="descr">Stratocaster</p>
+        </div>
+
+
+        <div class="card">
+          <a href="chitarre/telecaster.html">
+            <img src="immagini/telecaster.png" title="Cliccami per sapere di più sulla chitarra!" alt="telecaster" class="img" />
+          </a>
+          <p class="descr">Telecaster</p>
+        </div>
+
     </div>
 
     <!-- footer -->
-    
-    
+
+
     <div id="footer">
       <span class="info">enrico@guitarhub.it</span> |<span class="info"> +39 111 111 1111</span>
     </div>
-    
+
     <script type="text/javascript">
     var n = document.getElementById('navbar');
     var st = document.getElementById("s");
@@ -132,7 +135,7 @@
           st.style.backgroundColor = "#52BE80";
           a.innerHTML = "Sticky";
         }
-        
+
       }
 
 

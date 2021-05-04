@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body{/*Stile utile al footer*/
   display:flex;
   flex-direction:column;
@@ -20,9 +24,10 @@ html, body{
   padding: 0;
   background-color: #333;
   top: 0;
-  user-select: none;
+  z-index: 1;
   -moz-user-select: none;
   -webkit-user-select: none;
+  user-select: none;
 }
 
 .navbar-content {
@@ -84,28 +89,37 @@ div.dropdown {
 }
 
 .contenuti{
-  display: grid;
-  grid-template-columns: auto auto auto;
+  /*display: grid;
+  grid-template-columns: auto auto auto;*/
+  position: relative;
   margin: 10px auto;
-  width: 50%;
-  border: solid black 2px;
+  width: 70%;
+  border: solid black 0.15em;
   border-radius: 5px;
   text-align: justify;
-  background-color: #CACFD2;
+  background-color: inherit;
 }
 
 .card{
-  margin: 5px 0;
-  border: solid black 2px;
+  float: left;
+  margin: 3px 1%;
+  border: solid #777 0.15em;
   border-radius: 5px;
   text-decoration: none;
-  color: black;
-  grid-column-start: 2;
-  grid-column-end: 3;
+  width: 23%;
+  background-color: inherit/*hsl(202, 8%, 70%)*/;
+  /*grid-column-start: 2;
+  grid-column-end: 3;*/
+}
+
+.card:hover{
+  cursor: pointer;
+  filter: brightness(70%);
 }
 
 .img{
   width: 100%;
+  height: auto;
   border-radius: 5px;
 }
 
@@ -138,25 +152,52 @@ div.dropdown {
 
 .par{
   margin: 10px;
-  grid-column-start: 1;
-  grid-column-end: 4;
+  /*grid-column-start: 1;
+  grid-column-end: 4;*/
 }
 
 .descr{
-  font-family: monospace;
+  font: bolder 1.4em monospace;
   color: #000;
-  letter-spacing: 2px;
-  font-size: 18px;
+  letter-spacing: 0.15em;
   text-align: center;
   margin: 0;
-  grid-column-start: 2;
-  grid-column-end: 3;
+  /*grid-column-start: 2;
+  grid-column-end: 3;*/
 }
 
-#s, #carr, #svuotacarr{
+#s, #svuotacarr{
   float: right;
 }
 
 #s{
   background-color: #A1FFA0;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#contcarr{
+  color: #A1FFA0;
+  background-color: #333;
+  border: 2px solid #A1FFA0;
+  border-radius: 25%;
+  padding: 5px 10px;
+}
+
+@media only screen and (max-width: 700px) {
+  .card {
+    width: 96% !important;
+    float: none;
+  }
+}
+
+@media only screen and (max-width: 1452px) {
+  .card {
+    width: 46%;
+    margin: 6px 2%;
+  }
 }
