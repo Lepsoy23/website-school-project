@@ -5,7 +5,7 @@
 body{/*Stile utile al footer*/
   display:flex;
   flex-direction:column;
-  background-color: #CACFD2;
+  background-color: hsl(0, 7%, 81%);
 }
 
 html, body{
@@ -13,18 +13,22 @@ html, body{
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+body{
+  min-height: 100vh;
+}
+
 #sfondo{
   margin: 0;
 }
 
-/*----------CSS relativo al Navbar----------*/
+/*--------------------CSS relativo al Navbar--------------------*/
 
 #navbar {
   margin: 0;
   padding: 0;
-  background-color: #333;
+  background-color: #152D2D;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
@@ -43,7 +47,7 @@ html, body{
 }
 
 .navbar-content a:hover, .dropdown:hover .dropbtn {
-  background-color: tomato;
+  background-color: #8A0000;
   transition: all ease-in-out 0.2s;
 }
 
@@ -78,15 +82,43 @@ div.dropdown {
   transition: all ease-in-out 0.2s;
 }
 
-/*-------Fine CSS relativo al Navbar--------*/
+#s{
+  border-left: 2px solid black;
+  float: right;
+}
+
+.icon{
+  float: right;
+  color: #FFF;
+  font-size: 15px;
+  padding: 14px 18px;
+  display: none;
+  cursor: pointer;
+}
+
+.icon:hover{
+  background-color: #8A0000;
+  transition: all ease-in-out 0.2s;
+}
+
+/*-------------------------------------------------------------------*/
 
 #titolo{
   font-size: 2em;
   text-align: center;
   color: #A1FFA0;
-  background-color: #2C3E50;
+  background-color: #000;
   padding: 15px 0;
 }
+
+.sottotitolo{
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+/*-------------------------------------------------------------------*/
 
 .contenuti{
   /*display: grid;
@@ -101,6 +133,7 @@ div.dropdown {
 }
 
 .card{
+  position: relative;
   float: left;
   margin: 3px 1%;
   border: solid #777 0.15em;
@@ -114,40 +147,11 @@ div.dropdown {
 
 .card:hover{
   cursor: pointer;
-  filter: brightness(70%);
+  box-shadow: 0 10px 20px -5px hsl(0, 0%, 25%);
 }
 
-.img{
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
-#footer{
-  background-color: #52BE80;
-  margin-top:auto;
-  letter-spacing: 3px;
-  padding: 10px;
-  color: #000;
-  text-align: center;
-  z-index: 1;
-}
-
-.info:hover {
-  filter: brightness(80%);
-  cursor: pointer;
-  transition: all ease-in-out 0.2s;
-}
-
-.info{
-  color: #FFF;
-}
-
-.sottotitolo{
-  text-align: center;
-  margin-top: 10px;
-  font-size: 20px;
-  letter-spacing: 2px;
+.card:hover .prod{
+  display: block;
 }
 
 .par{
@@ -166,34 +170,124 @@ div.dropdown {
   grid-column-end: 3;*/
 }
 
-#s, #svuotacarr{
-  float: right;
+.img{
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
-#s{
-  background-color: #A1FFA0;
+/*-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*/
+
+#footer{
+  position: relative;
+  top: 10px;
+  background-color: #52BE80;
+  margin-top:auto;
+  letter-spacing: 3px;
+  padding: 10px;
+  color: #000;
+  text-align: center;
 }
 
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+.info:hover {
+  filter: brightness(20%);
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
 }
+
+.info{
+  color: #FFF;
+}
+
+/*-------------------------------------------------------------------*/
 
 #contcarr{
-  color: #A1FFA0;
-  background-color: #333;
-  border: 2px solid #A1FFA0;
+  color: #ffbb00;
+  background-color: inherit;
+  border: 2px solid #ffbb00;
   border-radius: 25%;
-  padding: 5px 10px;
+  padding: 3px 9px;
+  position: relative;
+  top: -7px;
 }
 
-@media only screen and (max-width: 700px) {
-  .card {
-    width: 96% !important;
-    float: none;
-  }
+/*-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*/
+
+.prod{
+  position: absolute;
+  display: none;
+  right: calc(50% - 105px / 2);
+  left: calc(50% - 105px / 2);
+  top: calc(50% - 105px / 2);
+  color: white;
+  border-radius: 15%;
+  padding: 5px;
+  background-color: hsl(0, 0%, 60%);
+  width: 105px;
+  height: 107px;
 }
+
+.prod:hover{
+  background-color: hsl(0, 0%, 20%)
+}
+
+.prod-cont{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: auto auto auto auto;
+}
+
+.prod-card{
+  position: relative;
+  border: 2px solid #000;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+}
+
+.rim{
+  color: red;
+  border: 1px solid #ff0101;
+  border-radius: 5px;
+  padding: 2px 3px;
+  display: inline-block;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.rim:hover, #svuota-tutto:hover{
+  cursor: pointer;
+  box-shadow: 0 5px 10px -5px hsl(0, 0%, 25%);
+}
+
+#svuota-tutto, #prezzo-tot{
+  border: 2px solid #4400ff;
+  border-radius: 5px;
+  padding: 2px;
+  margin: 5px;
+}
+
+#prezzo-tot{
+  color: hsl(0, 7%, 81%);
+  font-weight: 500;
+  background-color: #4400ff;
+}
+
+#svuota-tutto{
+  color: #4400ff;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/*-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*/
 
 @media only screen and (max-width: 1452px) {
   .card {
@@ -201,3 +295,80 @@ div.dropdown {
     margin: 6px 2%;
   }
 }
+
+@media only screen and (max-width: 1000px) {
+  .prod-cont{
+    justify-content: space-around;
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .prod-cont{
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  /*----------------CONTENUTO PER MOBILE-----------------*/
+  .card {
+    width: 96% !important;
+    float: none;
+  }
+  /*-----------------------------------------------------*/
+
+  /*--------------------NAVBAR MOBILE--------------------*/
+  #s{float: left;}
+
+  #navbar .navbar-content:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+
+  #navbar a.icon {
+    float: right;
+    display: block;
+  }
+
+  /*Disposizione elementi navbar dopo aver cliccato su .icon*/
+  #navbar.resp {position: relative;}
+
+  #navbar.resp .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  #navbar.resp .navbar-content {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+  }
+  /*Disposizione elementi dropdown dopo aver cliccato su .icon*/
+  #navbar.resp .dropdown {float: none;}
+  #navbar.resp .dropdown-content {position: relative;}
+  #navbar.resp .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  #navbar.resp .navbar-content a{
+    width: 100%;
+    text-align: left;
+  }
+
+  #navbar #s{
+    width: calc(100% - 50px);
+  }
+  /*-----------------------------------------------------*/
+}
+
+@media only screen and (max-width: 530px) {
+  .prod-cont{
+    justify-content: stretch;
+    grid-template-columns: auto;
+  }
+}
+
+/*-------------------------------------------------------------------*/

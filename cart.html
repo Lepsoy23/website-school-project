@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="immagini/nota-musicale-icon.png"/>
+    <title>Carrello</title>
+
+</head>
+<body onload="renderProdTable()">
+
+
+    <!-- titolo -->
+
+    <div id="titolo">
+        <b>Carrello</b>
+    </div>
+
+    <!-- navbar -->
+
+    <div id="navbar" style="position: sticky;">
+        <div class="navbar-content" id="s" style="background-color: #52BE80;"><a id="a">Attaccato</a></div>
+
+        <div class="navbar-content"><a href="chisiamo.html">Chi siamo</a></div>
+        <div class="navbar-content"><a href="info.html">Info</a></div>
+
+        <div class="navbar-content dropdown">
+
+          <a class="dropbtn">Chitarre</a>
+
+           <div class="dropdown-content" id="dropCont">
+            <a href="chitarre/acoustic.html">Acustiche</a>
+            <a href="chitarre/classical.html">Classiche</a>
+            <a href="chitarre/stratocaster.html">Stratocaster</a>
+            <a href="chitarre/telecaster.html">Telecaster</a>
+          </div>
+
+        </div>
+
+        <div class="navbar-content"><a href="../home.html">Home</a></div>
+
+        <a class="icon" onclick="navresp()">&#9776;</a>
+
+      </div>
+
+
+    <!-- sottotitolo -->
+
+    <b class="sottotitolo">Tutte le chitarre che hai deciso di comprare!</b>
+
+    <!-- Prodotti visualizzati -->
+
+
+    <div class="prod-cont">
+        <!-- Chitarre Acustiche -->
+        <div class="prod-card" id="ga">
+            <b>Non hai aggiunto niente!</b>
+            <p> <span class="qnt">Aggiungi</span> * <span class="prz">almeno una</span> = <span class="p-tot">chitarra</span> &euro;</p>
+            <div class="rim" onclick="rimUna('ga')">Per farlo</div>
+            <div class="rim" onclick="rimAll('ga')" style="margin-left: 23px;">premi su una chitarra</div>
+        </div>
+
+        <div class="prod-card"  id="om" style="display: none;">
+            <b>Nome Chitarra</b>
+            <p> <span class="qnt">quantità</span> * <span class="prz">prezzo</span> = <span class="p-tot">prezzo totale</span> &euro;</p>
+            <div class="rim" onclick="rimUna('om')">Rimuovi una</div>
+            <div class="rim" onclick="rimAll('om')" style="margin-left: 23px;">Rimuovi tutte</div>
+        </div>
+
+        <div class="prod-card" id="ju" style="display: none;">
+            <b>Nome Chitarra</b>
+            <p> <span class="qnt">quantità</span> * <span class="prz">prezzo</span> = <span class="p-tot">prezzo totale</span> &euro;</p>
+            <div class="rim" onclick="rimUna('ju')">Rimuovi una</div>
+            <div class="rim" onclick="rimAll('ju')" style="margin-left: 23px;">Rimuovi tutte</div>
+        </div>
+
+        <div class="prod-card" id="dn" style="display: none;">
+            <b>Nome Chitarra</b>
+            <p> <span class="qnt">quantità</span> * <span class="prz">prezzo</span> = <span class="p-tot">prezzo totale</span> &euro;</p>
+            <div class="rim" onclick="rimUna('dn')">Rimuovi una</div>
+            <div class="rim" onclick="rimAll('dn')" style="margin-left: 23px;">Rimuovi tutte</div>
+        </div>
+
+        <!-- Chitarre Classiche -->
+        <div class="prod-card" id="c" style="display: none;">
+            <b>Nome Chitarra</b>
+            <p> <span class="qnt">quantità</span> * <span class="prz">prezzo</span> = <span class="p-tot">prezzo totale</span> &euro;</p>
+            <div class="rim" onclick="rimUna('c')">Rimuovi una</div>
+            <div class="rim" onclick="rimAll('c')" style="margin-left: 23px;">Rimuovi tutte</div>
+        </div>
+
+        <div class="prod-card" id="c1" style="display: none;">
+            <b>Nome Chitarra</b>
+            <p> <span class="qnt">quantità</span> * <span class="prz">prezzo</span> = <span class="p-tot">prezzo totale</span> &euro;</p>
+            <div class="rim" onclick="rimUna('c1')">Rimuovi una</div>
+            <div class="rim" onclick="rimAll('c1')" style="margin-left: 23px;">Rimuovi tutte</div>
+        </div>
+
+        <div class="prod-card" id="c2" style="display: none;">
+            <b>Nome Chitarra</b>
+            <p> <span class="qnt">quantità</span> * <span class="prz">prezzo</span> = <span class="p-tot">prezzo totale</span> &euro;</p>
+            <div class="rim" onclick="rimUna('c2')">Rimuovi una</div>
+            <div class="rim" onclick="rimAll('c2')" style="margin-left: 23px;">Rimuovi tutte</div>
+        </div>
+
+        <div class="prod-card" id="c3" style="display: none;">
+            <b>Nome Chitarra</b>
+            <p> <span class="qnt">quantità</span> * <span class="prz">prezzo</span> = <span class="p-tot">prezzo totale</span> &euro;</p>
+            <div class="rim" onclick="rimUna('c3')">Rimuovi una</div>
+            <div class="rim" onclick="rimAll('c3')" style="margin-left: 23px;">Rimuovi tutte</div>
+        </div>
+
+        <!-- Stratocaster -->
+        <div class="prod-card" id="sq" style="display: none;">
+            <b>Nome Chitarra</b>
+            <p> <span class="qnt">quantità</span> * <span class="prz">prezzo</span> = <span class="p-tot">prezzo totale</span> &euro;</p>
+            <div class="rim" onclick="rimUna('sq')">Rimuovi una</div>
+            <div class="rim" onclick="rimAll('sq')" style="margin-left: 23px;">Rimuovi tutte</div>
+        </div>
+
+        <div class="prod-card" id="fe" style="display: none;">
+            <b>Nome Chitarra</b>
+            <p> <span class="qnt">quantità</span> * <span class="prz">prezzo</span> = <span class="p-tot">prezzo totale</span> &euro;</p>
+            <div class="rim" onclick="rimUna('fe')">Rimuovi una</div>
+            <div class="rim" onclick="rimAll('fe')" style="margin-left: 23px;">Rimuovi tutte</div>
+        </div>
+
+        <div class="prod-card" id="ss" style="display: none;">
+            <b>Nome Chitarra</b>
+            <p> <span class="qnt">quantità</span> * <span class="prz">prezzo</span> = <span class="p-tot">prezzo totale</span> &euro;</p>
+            <div class="rim" onclick="rimUna('ss')">Rimuovi una</div>
+            <div class="rim" onclick="rimAll('ss')" style="margin-left: 23px;">Rimuovi tutte</div>
+        </div>
+
+        <div class="prod-card" id="cs" style="display: none;">
+            <b>Nome Chitarra</b>
+            <p> <span class="qnt">quantità</span> * <span class="prz">prezzo</span> = <span class="p-tot">prezzo totale</span> &euro;</p>
+            <div class="rim" onclick="rimUna('cs')">Rimuovi una</div>
+            <div class="rim" onclick="rimAll('cs')" style="margin-left: 23px;">Rimuovi tutte</div>
+        </div>
+
+        <!-- Telecaster -->
+        <div class="prod-card" id="st" style="display: none;">
+            <b>Nome Chitarra</b>
+            <p> <span class="qnt">quantità</span> * <span class="prz">prezzo</span> = <span class="p-tot">prezzo totale</span> &euro;</p>
+            <div class="rim" onclick="rimUna('st')">Rimuovi una</div>
+            <div class="rim" onclick="rimAll('st')" style="margin-left: 23px;">Rimuovi tutte</div>
+        </div>
+
+        <div class="prod-card" id="ft" style="display: none;">
+            <b>Nome Chitarra</b>
+            <p> <span class="qnt">quantità</span> * <span class="prz">prezzo</span> = <span class="p-tot">prezzo totale</span> &euro;</p>
+            <div class="rim" onclick="rimUna('ft')">Rimuovi una</div>
+            <div class="rim" onclick="rimAll('ft')" style="margin-left: 23px;">Rimuovi tutte</div>
+        </div>
+
+        <div class="prod-card" id="vt" style="display: none;">
+            <b>Nome Chitarra</b>
+            <p> <span class="qnt">quantità</span> * <span class="prz">prezzo</span> = <span class="p-tot">prezzo totale</span> &euro;</p>
+            <div class="rim" onclick="rimUna('vt')">Rimuovi una</div>
+            <div class="rim" onclick="rimAll('vt')" style="margin-left: 23px;">Rimuovi tutte</div>
+        </div>
+
+        <div class="prod-card" id="ct" style="display: none;">
+            <b>Nome Chitarra</b>
+            <p> <span class="qnt">quantità</span> * <span class="prz">prezzo</span> = <span class="p-tot">prezzo totale</span> &euro;</p>
+            <div class="rim" onclick="rimUna('ct')">Rimuovi una</div>
+            <div class="rim" onclick="rimAll('ct')" style="margin-left: 23px;">Rimuovi tutte</div>
+        </div>
+    </div>
+
+    <span style="margin: 0 auto;">
+        <span id="svuota-tutto" onclick="svuota()">Svuota tutto</span> <span id="prezzo-tot">Prezzo totale = <span id="prz-cht-tot">0</span> &euro;</span>
+    </span>
+
+    <!-- footer -->
+
+
+    <div id="footer">
+        <span class="info">enrico@guitarhub.it</span> |<span class="info"> +39 111 111 1111</span>
+    </div>
+
+    <script src="cart.js"></script>
+</body>
+</html>

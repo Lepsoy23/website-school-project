@@ -2,11 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="../immagini/nota-musicale-icon.png"/>
     <link rel="stylesheet" href="style.css">
     <title>Chi siamo</title>
   </head>
-  <body>
+  <body onload="renderCart()">
 
     <!-- titolo -->
 
@@ -17,15 +18,16 @@
     <!-- navbar -->
 
     <div id="navbar" style="position: sticky;">
+      <div class="navbar-content" id="s" style="background-color: #52BE80;"><a id="a">Attaccato</a></div>
 
       <div class="navbar-content"><a href="chisiamo.html">Chi siamo</a></div>
       <div class="navbar-content"><a href="info.html">Info</a></div>
 
       <div class="navbar-content dropdown">
 
-        <a href="" class="dropbtn">Chitarre</a>
+        <a class="dropbtn">Chitarre</a>
 
-        <div class="dropdown-content">
+         <div class="dropdown-content" id="dropCont">
           <a href="chitarre/acoustic.html">Acustiche</a>
           <a href="chitarre/classical.html">Classiche</a>
           <a href="chitarre/stratocaster.html">Stratocaster</a>
@@ -34,9 +36,15 @@
 
       </div>
 
-      <div class="navbar-content"><a href="../index.html">Home</a></div>
+      <div class="navbar-content" id="carr">
+        <a href="cart.html" style="padding-bottom: 6px;">
+          <img src="immagini/cart.png" alt=""> &nbsp;<span id="contcarr"></span>
+        </a>
+      </div>
 
-      <div class="navbar-content" id="s" style="background-color: #52BE80;"><a href="" id="a">Sticky</a></div>
+      <div class="navbar-content" id="svuotacarr" style="display: none;" onclick="cl()"><a>Svuota carrello</a></div>
+
+      <a class="icon" onclick="navresp()">&#9776;</a>
 
     </div>
 
@@ -47,7 +55,7 @@
     <!-- contenuti -->
 
     <div class="contenuti">
-      <p class="par">L'azienda è nata da un gruppo di liuteristi amici che sognavano avere un negozio dove poter vendere le chitarre che aquistavano e che facevano. 
+      <p class="par">L'azienda è nata da un gruppo di liuteristi amici che sognavano avere un negozio dove poter vendere le chitarre che aquistavano e che facevano.
         Da questo sogno, tre ragazzi si sono organizzati e hanno fondato un piccolo negozio a Cuneo, dove ora c'è la sede centrale di tutta l'azienda.
 
       </p>
@@ -88,25 +96,7 @@
       <span class="info">enrico@guitarhub.it</span> |<span class="info"> +39 111 111 1111</span>
     </div>
 
-    <script type="text/javascript">
-      var n = document.getElementById("navbar");
-      var st = document.getElementById("s");
-      var a = document.getElementById("a");
-
-        document.getElementById("s").onclick = function St_NoSt(e){
-          e.preventDefault();
-
-          if(n.style.position === "sticky"){
-            n.style.position = "static";
-            st.style.backgroundColor = "#333";
-            a.innerHTML = "Static";
-          }else if(n.style.position === "static"){
-            n.style.position = "sticky";
-            st.style.backgroundColor = "#52BE80";
-            a.innerHTML = "Sticky";
-          }
-        }
-    </script>
+    <script src="cart.js"></script>
 
   </body>
 </html>

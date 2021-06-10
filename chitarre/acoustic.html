@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../style.css">
     <title>Acustica</title>
   </head>
-  <body>
+  <body onload="renderCart()">
 
     <!-- titolo -->
 
@@ -18,6 +18,7 @@
     <!-- navbar -->
 
     <div id="navbar" style="position: sticky;">
+      <div class="navbar-content" id="s" style="background-color: #52BE80;"><a id="a">Attaccato</a></div>
 
       <div class="navbar-content"><a href="../chisiamo.html">Chi siamo</a></div>
       <div class="navbar-content"><a href="../info.html">Info</a></div>
@@ -26,7 +27,7 @@
 
         <a class="dropbtn">Chitarre</a>
 
-        <div class="dropdown-content">
+         <div class="dropdown-content" id="dropCont">
           <a href="acoustic.html">Acustiche</a>
           <a href="classical.html">Classiche</a>
           <a href="stratocaster.html">Stratocaster</a>
@@ -35,9 +36,17 @@
 
       </div>
 
-      <div class="navbar-content"><a href="../index.html">Home</a></div>
+      <div class="navbar-content" id="carr">
+        <a href="../cart.html" style="padding-bottom: 6px;">
+          <img src="../immagini/cart.png" alt=""> &nbsp;<span id="contcarr"></span>
+        </a>
+      </div>
 
-      <div class="navbar-content" id="s" style="background-color: #52BE80;"><a href="" id="a">Sticky</a></div>
+      <div class="navbar-content" id="svuotacarr" style="display: none;" onclick="cl()"><a>Svuota carrello</a></div>
+
+      <div class="navbar-content"><a href="../home.html">Home</a></div>
+
+      <a class="icon" onclick="navresp()">&#9776;</a>
 
     </div>
 
@@ -82,25 +91,31 @@
       </p>
 
       <div class="card">
-          <img src="../immagini/orchestra-model.png" title="Cliccami per aggiungermi al carrello!" alt="chitarra acustica" class="img" />
-          <p class="descr">Orchestra Model, a partire da 150,00 €</p>
+        <img src="../immagini/grand-auditorium.png" alt="chitarra acustica" class="img" />
+        <p class="descr">Grand Auditorium, a partire da 150,00 €</p>
+        <div class="prod" title="Cliccami per aggiungermi al carrello!" onclick="add('ga')"><img src="../immagini/cart_plus_x2.svg" width="100px" alt="Aggiungi"></div>
       </div>
 
       <div class="card">
-          <img src="../immagini/grand-auditorium.png" title="Cliccami per aggiungermi al carrello!" alt="chitarra acustica" class="img" />
-          <p class="descr">Grand Auditorium, a partire da 150,00 €</p>
+        <img src="../immagini/orchestra-model.png" alt="chitarra acustica" class="img" />
+        <p class="descr">Orchestra Model, a partire da 150,00 €</p>
+        <div class="prod" title="Cliccami per aggiungermi al carrello!" onclick="add('om')"><img src="../immagini/cart_plus_x2.svg" width="100px" alt="Aggiungi"></div>
       </div>
 
       <div class="card">
-          <img src="../immagini/jumbo.png" title="Cliccami per aggiungermi al carrello!" alt="chitarra acustica" class="img" />
+          <img src="../immagini/jumbo.png" alt="chitarra acustica" class="img" />
           <p class="descr">Jumbo, a partire da 200,00 €</p>
+          <div class="prod" title="Cliccami per aggiungermi al carrello!" onclick="add('ju')"><img src="../immagini/cart_plus_x2.svg" width="100px" alt="Aggiungi"></div>
       </div>
 
       <div class="card">
-        <img src="../immagini/dreadnought.png" title="Cliccami per aggiungermi al carrello!" alt="chitarra acustica" class="img" />
+        <img src="../immagini/dreadnought.png" alt="chitarra acustica" class="img" />
         <p class="descr">Dreadnought, a partire da 200,00 €</p>
+        <div class="prod" title="Cliccami per aggiungermi al carrello!" onclick="add('dn')"><img src="../immagini/cart_plus_x2.svg" width="100px" alt="Aggiungi"></div>
     </div>
     </div>
+
+    <!--div id="prova"></div-->
 
     <!-- footer -->
 
@@ -108,25 +123,8 @@
       <span class="info">enrico@guitarhub.it</span> |<span class="info"> +39 111 111 1111</span>
     </div>
 
-    <script type="text/javascript">
-      var n = document.getElementById("navbar");
-      var st = document.getElementById("s");
-      var a = document.getElementById("a");
+    <script src="../cart.js"></script>
 
-        document.getElementById("s").onclick = function St_NoSt(e){
-          e.preventDefault();
-
-          if(n.style.position === "sticky"){
-            n.style.position = "static";
-            st.style.backgroundColor = "#333";
-            a.innerHTML = "Static";
-          }else if(n.style.position === "static"){
-            n.style.position = "sticky";
-            st.style.backgroundColor = "#52BE80";
-            a.innerHTML = "Sticky";
-          }
-        }
-    </script>
 
   </body>
 </html>
