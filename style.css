@@ -91,9 +91,30 @@ div.dropdown {
   float: right;
   color: #FFF;
   font-size: 15px;
-  padding: 14px 18px;
+  padding: 23px 18px;
   display: none;
   cursor: pointer;
+}
+
+.icon-label, .icon-label::after, .icon-label::before{
+  background: #FFF;
+  height: 1px;
+  width: 14px;
+  border-radius: 1px;
+  position: relative;
+}
+
+.icon-label::after, .icon-label::before{
+  content: '';
+  position: absolute;
+}
+
+.icon-label::after{
+  top: 5px;
+}
+
+.icon-label::before{
+  bottom: 5px;
 }
 
 .icon:hover{
