@@ -88,11 +88,12 @@ div.dropdown {
 }
 
 .icon{
-  float: right;
-  color: #FFF;
-  font-size: 15px;
-  padding: 23px 18px;
+  position: absolute;
+  right: 0;
+  top: 0;
   display: none;
+  padding: 23px 18px;
+  font-size: 15px;
   cursor: pointer;
 }
 
@@ -100,7 +101,6 @@ div.dropdown {
   background: #FFF;
   height: 1px;
   width: 14px;
-  border-radius: 1px;
   position: relative;
 }
 
@@ -337,28 +337,22 @@ div.dropdown {
     float: none;
   }
   /*-----------------------------------------------------*/
-
+  
   /*--------------------NAVBAR MOBILE--------------------*/
   #s{float: left;}
-
+  
   #navbar .navbar-content:not(:first-child), .dropdown .dropbtn {
     display: none;
   }
-
+  
   #navbar a.icon {
     float: right;
     display: block;
   }
-
+  
   /*Disposizione elementi navbar dopo aver cliccato su .icon*/
   #navbar.resp {position: relative;}
-
-  #navbar.resp .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
+  
   #navbar.resp .navbar-content {
     float: none;
     display: block;
@@ -389,6 +383,10 @@ div.dropdown {
   .prod-cont{
     justify-content: stretch;
     grid-template-columns: auto;
+  }
+
+  .contenuti{
+    width: 90%;
   }
 }
 
